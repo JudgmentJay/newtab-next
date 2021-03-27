@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@400;600&display=swap');
+
+@import './reset.scss';
+
+body {
+	overflow: hidden;
+
+	font-family: 'Signika', sans-serif;
+
+	background-color: black;
+
+	&.golden {
+		background: url(/newtab/img/room-golden.jpg) black center top fixed no-repeat;
+		background-size: cover;
+	}
+
+	&.day {
+		background: url(/newtab/img/room-day.jpg) black center top fixed no-repeat;
+		background-size: cover;
+	}
+
+	&.night {
+		background: url(/newtab/img/room-night.jpg) black center top fixed no-repeat;
+		background-size: cover;
+	}
+}
+
+h1 {
+	padding: 10px 10px 6px;
+
+	font-size: 1.6em;
+	font-weight: 600;
+	text-transform: uppercase;
+
+	cursor: default;
+}
+
+h2 {
+	margin: 0 0 1em 0;
+
+	font-size: 2.4em;
+	font-weight: 600;
+	text-align: center;
+}
+
+@media (min-width: 1630px) {
+	h1 {
+		padding: 15px 15px 11px;
+
+		font-size: 2em;
+	}
+}
+
+@media (min-width: 3790px) {
+	h1 {
+		padding: 20px 20px 13px;
+
+		font-size: 3em;
+	}
+}
+
+@media (min-width: 3790px) {
+	h2 {
+		font-size: 2.2em;
+	}
+}

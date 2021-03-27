@@ -1,0 +1,7 @@
+$red: #800000;
+$textShadow: 4px 4px 0 rgba(0, 0, 0, 1);
+
+:export {
+	red: $red;
+	textShadow: $textShadow;
+}

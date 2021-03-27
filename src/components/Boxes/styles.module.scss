@@ -1,0 +1,20 @@
+.boxes {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	padding-top: 10px;
+
+	color: black;
+}
+
+@media (min-width: 1870px) {
+	.boxes {
+		padding-top: 20px;
+	}
+}
+
+@media (min-width: 3790px) {
+	.boxes {
+		padding-top: 30px;
+	}
+}

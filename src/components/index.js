@@ -1,0 +1,6 @@
+export { default as Box } from './Box/Box.jsx'
+export { default as Boxes } from './Boxes/Boxes.jsx'
+export { default as DateAndWeather } from './DateAndWeather/DateAndWeather.jsx'
+export { default as CornerBox } from './CornerBox/CornerBox.jsx'
+export { default as Today } from './Today/Today.jsx'
+export { default as Weather } from './Weather/Weather.jsx'

@@ -1,0 +1,39 @@
+{
+	"name": "newtab-next",
+	"version": "1.0.0",
+	"description": "New Tab Page using NextJS",
+	"homepage": "https://github.com/JudgmentJay/newtab-next",
+	"license": "UNLICENSED",
+	"private": true,
+	"author": {
+		"name": "Jay Posten",
+		"email": "jdposten@gmail.com",
+		"url": "https://www.jayposten.com/"
+	},
+	"main": "index.js",
+	"scripts": {
+		"dev": "next dev",
+		"build": "npm run clean && next build && next export",
+		"clean": "npx rimraf build out"
+	},
+	"browserslist": [
+		"last 2 Chrome versions",
+		"last 2 Firefox versions"
+	],
+	"dependencies": {
+		"classnames": "^2.2.6",
+		"next": "^10.0.9",
+		"prop-types": "^15.7.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"eslint": "^7.22.0",
+		"eslint-plugin-compat": "^3.9.0",
+		"eslint-plugin-react": "^7.23.1",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"file-loader": "^6.2.0",
+		"rimraf": "^3.0.2",
+		"sass": "^1.32.8"
+	}
+}

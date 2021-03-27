@@ -1,0 +1,30 @@
+@import '../../css/variables.scss';
+
+.dateAndWeather {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+
+	font-size: 4em;
+	color: white;
+	text-shadow: $textShadow;
+}
+
+@media (min-width: 1870px) {
+	.dateAndWeather {
+		bottom: 20px;
+		left: 20px;
+	}
+}
+
+@media (min-width: 2510px) {
+	.dateAndWeather {
+		font-size: 6em;
+	}
+}
+
+@media (min-width: 3790px) {
+	.dateAndWeather {
+		font-size: 8em;
+	}
+}
