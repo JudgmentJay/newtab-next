@@ -10,7 +10,7 @@
 		"email": "jdposten@gmail.com",
 		"url": "https://www.jayposten.com/"
 	},
-	"main": "index.js",
+	"main": "pages/index.jsx",
 	"scripts": {
 		"dev": "next dev",
 		"build": "npm run clean && next build && next export",

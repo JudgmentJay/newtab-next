@@ -37,19 +37,23 @@ const NewTab = ({
 }
 
 export async function getStaticProps() {
-	const proxy = process.env.PROXY
+	const server = process.env.SERVER_URL
 
-	const bookmarksFetch = fetch(`${proxy}/bookmarks/read/`)
+	const bookmarksFetch = fetch(`${server}/bookmarks/read/`)
 		.then((response) => response.json())
 		.then((bookmarks) => bookmarks)
-		.catch(() => [])
+		.catch((error) => {
+			console.log(`Error fetching bookmark data: ${error}`)
+
+			return []
+		})
 
 	const darkSkyApiKey = process.env.DARK_SKY_API_KEY
 	const latitude = '30.2973'
 	const longitude = '-97.8105'
 	const exclusions = 'minutely,hourly,alerts,flags'
 
-	const weatherFetch = fetch(`${proxy}/proxy/https://api.darksky.net/forecast/${darkSkyApiKey}/${latitude},${longitude}?exclude=${exclusions}`, {
+	const weatherFetch = fetch(`${server}/proxy/https://api.darksky.net/forecast/${darkSkyApiKey}/${latitude},${longitude}?exclude=${exclusions}`, {
 		headers: {
 			'x-requested-with': 'XMLHttpRequest'
 		}
@@ -61,11 +65,20 @@ export async function getStaticProps() {
 			sunrise: weather.daily.data[0].sunriseTime,
 			sunset: weather.daily.data[0].sunsetTime
 		}))
-		.catch(() => {})
+		.catch((error) => {
+			console.log(`Error fetching weather data: ${error}`)
+
+			return {}
+		})
 
 	const [bookmarks, weather] = await Promise.all([bookmarksFetch, weatherFetch])
 
-	return { props: { bookmarks, weather } }
+	return {
+		props: {
+			bookmarks,
+			weather
+		}
+	}
 }
 
 NewTab.propTypes = {
