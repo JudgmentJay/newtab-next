@@ -8,6 +8,7 @@ module.exports = (phase) => {
 			{
 				source: '/bookmarks/:path*',
 				destination: 'http://localhost:3010/bookmarks/:path*',
+				basePath: false
 			}
 		]
 		: []

@@ -1,1 +1,1 @@
-export { default as EditBookmark } from './EditBookmark/Editbookmark.jsx'
+export { default as EditBookmark } from './EditBookmark/EditBookmark.jsx'

@@ -36,7 +36,7 @@ const NewTab = ({
 	)
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const server = process.env.SERVER_URL
 
 	const bookmarksFetch = fetch(`${server}/bookmarks/read/`)

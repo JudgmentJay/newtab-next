@@ -13,8 +13,9 @@
 	"main": "pages/index.jsx",
 	"scripts": {
 		"dev": "next dev",
-		"build": "npm run clean && next build && next export",
-		"clean": "npx rimraf build out"
+		"build": "npm run clean && next build",
+		"start": "next start",
+		"clean": "npx rimraf build"
 	},
 	"browserslist": [
 		"last 2 Chrome versions",
